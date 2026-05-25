@@ -71,7 +71,7 @@ function FeatureCardMobile({
   );
 }
 
-export function SecurityGrid() {
+export function SecurityIcons() {
   return (
     <PageSection
       width="full"
