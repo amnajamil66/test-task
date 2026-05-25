@@ -12,14 +12,14 @@ const iconImages = {
   "shield-warning": images.icons.shieldWarning,
 } as const;
 
-export type SecurityIconName = keyof typeof iconImages;
+export type SecurityIcons = keyof typeof iconImages;
 
 export function SecurityIcon({
   name,
   className,
   style,
 }: {
-  name: SecurityIconName;
+  name: SecurityIcons;
   className?: string;
   style?: React.CSSProperties;
 }) {

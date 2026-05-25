@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { images } from "@/lib/assets";
 import { securityFeatures } from "@/lib/data";
-import type { SecurityIconName } from "@/lib/data";
+import type { SecurityIcons } from "@/lib/data";
 import { PageSection } from "@/components/PageSection";
 import { SecurityIcon } from "@/components/pagesections/SecurityIcons";
 import { figma } from "@/lib/figma-tokens";
@@ -13,7 +13,7 @@ function FeatureCardContent({
   title,
   iconSize,
 }: {
-  icon: SecurityIconName;
+  icon: SecurityIcons;
   title: string;
   iconSize: number;
 }) {
@@ -35,7 +35,7 @@ function FeatureCardDesktop({
   iconSize,
   style,
 }: {
-  icon: SecurityIconName;
+  icon: SecurityIcons;
   title: string;
   iconSize: number;
   style: { left: number; top: number; width: number; height: number };
@@ -60,7 +60,7 @@ function FeatureCardMobile({
   title,
   iconSize,
 }: {
-  icon: SecurityIconName;
+  icon: SecurityIcons;
   title: string;
   iconSize: number;
 }) {
