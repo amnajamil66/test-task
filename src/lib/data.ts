@@ -4,10 +4,13 @@ export const navLinks = [
   { label: "GenPen", href: "#genpen", active: false },
   { label: "Contact", href: "#contact", active: false },
 ] as const;
-
-import type { SecurityIconName } from "@/components/icons/SecurityIcons";
-
-export type { SecurityIconName };
+export type SecurityIconName =
+  | "lock"
+  | "wall"
+  | "shield-check"
+  | "fingerprint"
+  | "security-camera"
+  | "shield-warning";
 
 export const securityFeatures: {
   icon: SecurityIconName;
