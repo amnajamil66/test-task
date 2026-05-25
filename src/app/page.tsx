@@ -1,36 +1,36 @@
-import { Header } from "@/components/Header";
-import { AngularGradient } from "@/components/sections/AngularGradient";
-import { Hero } from "@/components/sections/Hero";
-import { Supporters } from "@/components/sections/Supporters";
-import { DashboardSection } from "@/components/sections/DashboardSection";
-import { StatsSection } from "@/components/sections/StatsSection";
-import { SecuritySection } from "@/components/sections/SecuritySection";
-import { FeaturesShowcase } from "@/components/sections/FeaturesShowcase";
-import { FeaturesTabs } from "@/components/sections/FeaturesTabs";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { CtaSection } from "@/components/sections/CtaSection";
-import { Footer } from "@/components/sections/Footer";
+import { SiteHeader } from "@/components/SiteHeader";
+import { HeroBackground } from "@/components/pagesections/HeroBackground";
+import { HeroSection } from "@/components/pagesections/HeroSection";
+import { SupportersStrip } from "@/components/pagesections/SupportersStrip";
+import { DashboardPreview } from "@/components/pagesections/DashboardPreview";
+import { StatsRow } from "@/components/pagesections/StatsRow";
+import { SecurityGrid } from "@/components/pagesections/SecurityGrid";
+import { DisplayFeatures } from "@/components/pagesections/DisplayFeatures";
+import { FTabs } from "@/components/pagesections/FTabs";
+import { Testimonials } from "@/components/pagesections/Testimonials";
+import { CtaSection } from "@/components/pagesections/CtaSection";
+import { Footer } from "@/components/pagesections/Footer";
 
 export default function Home() {
   return (
-    <main className="relative mx-auto w-full max-w-[1440px] overflow-x-hidden bg-bg-subtle">
+    <main className="relative w-full overflow-x-hidden bg-bg-subtle">
       <div className="hero-supporters-bridge relative w-full">
-        <AngularGradient priority />
+        <HeroBackground priority />
 
-        <div className="hero-content-layer">
-          <div className="hero-bg-frame mx-auto flex w-full flex-col items-center">
-            <Header />
+        <div className="hero-content-layer w-full">
+          <div className="hero-bg-frame w-full flex flex-col items-center">
+            <SiteHeader />
           </div>
-          <Hero />
-          <Supporters />
+          <HeroSection />
+          <SupportersStrip />
         </div>
       </div>
 
-      <DashboardSection />
-      <StatsSection />
-      <SecuritySection />
-      <FeaturesShowcase />
-      <FeaturesTabs />
+      <DashboardPreview />
+      <StatsRow />
+      <SecurityGrid />
+      <DisplayFeatures />
+      <FTabs />
       <Testimonials />
       <CtaSection />
       <Footer />

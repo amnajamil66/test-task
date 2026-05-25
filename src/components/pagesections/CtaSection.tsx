@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/Button";
-import { CtaCurves } from "@/components/sections/CtaCurves";
+import { PentButton } from "@/components/PentButton";
+import { CtaCurves } from "@/components/pagesections/CtaCurves";
 import { figma } from "@/lib/figma-tokens";
 
 const { cta } = figma;
@@ -51,7 +51,7 @@ export function CtaSection() {
             facilisi neque a arcu vitae dignissim. Sit lobortis orci risus
             volutpat eu habitasse.
           </p>
-          <Button size="sm">Book a demo</Button>
+          <PentButton size="sm">Book a demo</PentButton>
         </div>
       </div>
     </section>

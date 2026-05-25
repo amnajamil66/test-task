@@ -67,12 +67,10 @@ export function Testimonials() {
       style={{
         paddingTop: t.paddingTop,
         paddingBottom: t.paddingBottom,
-        paddingLeft: t.pageMarginX,
-        paddingRight: t.pageMarginX,
       }}
     >
       <div
-        className="flex w-full max-w-[1280px] flex-col"
+        className="flex w-full max-w-[1280px] flex-col px-4 md:px-8 lg:px-[80px]"
         style={{ gap: figma.space.gap36 }}
       >
         <h2 className="type-5xl-semibold text-center text-text-contrast">

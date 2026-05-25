@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { CheckCircleIcon } from "@/components/icons/CheckCircleIcon";
-import { ShowcaseArcCurve } from "@/components/sections/ShowcaseArcCurve";
-import { ShowcaseBottomDecor } from "@/components/sections/ShowcaseBottomDecor";
-import { ShowcasePanelSparkles } from "@/components/sections/ShowcasePanelSparkles";
+import { CheckBadgeIcon } from "@/components/CheckBadgeIcon";
+import { ShowcaseArcCurve } from "@/components/pagesections/Arc";
+import { ShowcaseBottomDecor } from "@/components/pagesections/lowerdisplay";
+import { ShowcasePanelSparkles } from "@/components/pagesections/sparkles";
 import { images } from "@/lib/assets";
 import { checkItems } from "@/lib/data";
 import { figma } from "@/lib/figma-tokens";
@@ -22,7 +22,7 @@ function CheckList() {
           style={{ gap: s.checkRowGap }}
         >
           <span className="shrink-0">
-            <CheckCircleIcon
+            <CheckBadgeIcon
               size={s.checkIconSize}
               className="features-showcase-check-icon"
             />
@@ -215,7 +215,7 @@ function FeatureColumn({
   );
 }
 
-export function FeaturesShowcase() {
+export function DisplayFeatures() {
   return (
     <section
       className="features-showcase-section relative mx-auto flex w-full flex-col items-center gap-7 overflow-hidden px-4 pt-8 pb-6 lg:gap-12 lg:px-0 lg:pt-12 lg:pb-6"

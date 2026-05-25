@@ -1,32 +1,27 @@
-import Image from "next/image";
-import { images } from "@/lib/assets";
 import { figma } from "@/lib/figma-tokens";
 import { cn } from "@/lib/utils";
 
-type LogoProps = {
+type PentLogoProps = {
   variant?: "header" | "footer";
   className?: string;
 };
 
-export function Logo({ variant = "header", className }: LogoProps) {
+export function PentLogo({ variant = "header", className }: PentLogoProps) {
   if (variant === "footer") {
     const footerLogo = figma.logo.footer;
-
     return (
       <div
         className={cn("relative shrink-0", className)}
-        style={{
-          width: footerLogo.width,
-          height: footerLogo.height,
-        }}
+        style={{ width: footerLogo.width, height: footerLogo.height }}
         aria-label="PentAi"
       >
         <span
-          className="font-logo absolute font-bold leading-none text-text-contrast"
+          className="absolute font-bold leading-none text-[#ECEDEE]"
           style={{
             left: footerLogo.offsetX,
             top: footerLogo.offsetY,
             fontSize: footerLogo.fontSize,
+            fontFamily: "'DM Sans', sans-serif",
           }}
         >
           PentAi.
@@ -48,31 +43,40 @@ export function Logo({ variant = "header", className }: LogoProps) {
         style={{ top: logo.textTop }}
       >
         <span
-          className="font-logo font-bold leading-none text-white"
-          style={{ fontSize: logo.fontSize }}
+          className="font-bold leading-none text-white"
+          style={{ fontSize: logo.fontSize, fontFamily: "'DM Sans', sans-serif" }}
         >
           Pent
         </span>
-        <span className="text-gradient-logo-a font-logo font-bold leading-none" style={{ fontSize: logo.fontSize }}>
+        <span
+          className="font-bold leading-none"
+          style={{
+            fontSize: logo.fontSize,
+            fontFamily: "'DM Sans', sans-serif",
+            background: "linear-gradient(-37deg, #301A3A 0%, #7938B2 52%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
           A
         </span>
       </div>
 
-      <Image
-        src={images.logoDot}
-        alt=""
-        width={22}
-        height={22}
-        className="absolute object-contain"
+      {/* Dot accent — purple sparkle */}
+      <span
+        className="absolute rounded-full"
         style={{
           left: logo.dot.left,
           top: logo.dot.top,
           width: logo.dot.width,
           height: logo.dot.height,
+          background: "radial-gradient(circle, #B77DDD 0%, #7938B2 60%, transparent 100%)",
         }}
         aria-hidden
       />
 
+      {/* Vertical bar */}
       <span
         className="absolute rounded-[1px]"
         style={{
@@ -80,8 +84,7 @@ export function Logo({ variant = "header", className }: LogoProps) {
           top: logo.bar.top,
           width: logo.bar.width,
           height: logo.bar.height,
-          background:
-            "linear-gradient(113deg, rgba(121, 56, 178, 1) 0%, rgba(48, 26, 58, 1) 100%)",
+          background: "linear-gradient(113deg, #7938B2 0%, #301A3A 100%)",
         }}
         aria-hidden
       />

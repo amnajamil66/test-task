@@ -15,7 +15,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "PentAi — AI Security Platform",
+  title: "PentAI-Smart Platform",
   description:
     "PentAi landing page — Lorem ipsum dolor sit amet consectetur.",
 };

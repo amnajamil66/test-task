@@ -2,8 +2,8 @@ import Image from "next/image";
 import { images } from "@/lib/assets";
 import { securityFeatures } from "@/lib/data";
 import type { SecurityIconName } from "@/lib/data";
-import { Section } from "@/components/layout/Section";
-import { SecurityIcon } from "@/components/icons/SecurityIcons";
+import { PageSection } from "@/components/PageSection";
+import { SecurityIcon } from "@/components/pagesections/SecurityIcons";
 import { figma } from "@/lib/figma-tokens";
 
 const s = figma.security;
@@ -71,9 +71,9 @@ function FeatureCardMobile({
   );
 }
 
-export function SecuritySection() {
+export function SecurityGrid() {
   return (
-    <Section
+    <PageSection
       width="full"
       padding="none"
       pageMarginX={0}
@@ -125,6 +125,6 @@ export function SecuritySection() {
           </div>
         </div>
       </div>
-    </Section>
+    </PageSection>
   );
 }

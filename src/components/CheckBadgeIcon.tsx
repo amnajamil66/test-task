@@ -1,4 +1,4 @@
-export function CheckCircleIcon({
+export function CheckBadgeIcon({
   size = 38,
   className,
 }: {
@@ -15,10 +15,11 @@ export function CheckCircleIcon({
       aria-hidden
       className={className ? `shrink-0 ${className}` : "shrink-0"}
     >
-      <circle cx="19" cy="19" r="19" fill="#FFFFFF" />
+      <circle cx="19" cy="19" r="19" fill="#FFFFFF" fillOpacity="0.12" />
+      <circle cx="19" cy="19" r="18.5" stroke="#ECEDEE" strokeOpacity="0.2" />
       <path
         d="M12 19.25L16.25 23.5L26 12.75"
-        stroke="#1C1C1C"
+        stroke="#ECEDEE"
         strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"

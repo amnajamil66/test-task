@@ -3,18 +3,18 @@
 import { useState, type CSSProperties } from "react";
 import Image from "next/image";
 import { images } from "@/lib/assets";
-import { Section } from "@/components/layout/Section";
+import { PageSection } from "@/components/PageSection";
 import { featureTabs } from "@/lib/data";
 import { figma } from "@/lib/figma-tokens";
 import { cn } from "@/lib/utils";
 
 const t = figma.featureTabs;
 
-export function FeaturesTabs() {
+export function FTabs() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <Section
+    <PageSection
       width="full"
       padding="64"
       pageMarginX={0}
@@ -22,7 +22,7 @@ export function FeaturesTabs() {
       className="features-tabs-section px-4 md:px-6 lg:px-0"
     >
       <div
-        className="features-tabs-inner flex w-full flex-col items-center"
+        className="features-tabs-inner mx-auto flex w-full flex-col items-center"
         style={{ gap: t.headingGap, maxWidth: t.contentWidth }}
       >
         <h2 className="type-5xl-semibold text-center text-text-contrast">
@@ -30,11 +30,10 @@ export function FeaturesTabs() {
         </h2>
 
         <div
-          className="features-tabs-row flex w-full flex-col lg:flex-row lg:items-stretch"
+          className="features-tabs-row mx-auto flex w-full flex-col items-center justify-center lg:flex-row lg:items-center lg:justify-center"
           style={
             {
               gap: t.rowGap,
-              width: "100%",
               maxWidth: t.contentWidth,
               "--features-list-width": `${t.listWidth}px`,
               "--features-row-height": `${t.rowHeight}px`,
@@ -43,7 +42,7 @@ export function FeaturesTabs() {
           }
         >
           <div
-            className="features-tabs-list flex w-full min-w-0 flex-col"
+            className="features-tabs-list flex w-full max-w-[520px] flex-col"
             style={{ gap: t.listGap }}
           >
             {featureTabs.map((tab, index) => {
@@ -92,7 +91,7 @@ export function FeaturesTabs() {
           </div>
 
           <div
-            className="features-tabs-media relative shrink-0 overflow-hidden"
+            className="features-tabs-media relative mx-auto shrink-0 overflow-hidden"
             style={{
               width: t.imageWidth,
               height: t.imageHeight,
@@ -111,6 +110,6 @@ export function FeaturesTabs() {
           </div>
         </div>
       </div>
-    </Section>
+    </PageSection>
   );
 }

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Logo } from "@/components/Logo";
+import { PentLogo } from "@/components/PentLogo";
 import {
   IconFacebook,
   IconInstagram,
   IconLinkedIn,
   IconX,
   IconYoutube,
-} from "@/components/icons/SocialIcons";
+} from "@/components/SocialIcons";
 import { images } from "@/lib/assets";
 
 const socialLinks = [
@@ -22,12 +22,12 @@ export function Footer() {
   return (
     <footer
       id="contact"
-      className="site-footer mx-auto w-full min-w-0 max-w-[1440px] box-border px-4 py-10 md:px-8 md:py-12 lg:px-[80px] lg:py-14"
+      className="site-footer w-full min-w-0 box-border px-4 py-10 md:px-8 md:py-12 lg:px-[80px] lg:py-14"
     >
       <div className="site-footer-inner mx-auto flex w-full min-w-0 max-w-[1280px] flex-col">
         <div className="site-footer-top flex w-full min-w-0 flex-col gap-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-end lg:gap-6">
           <div className="site-footer-brand flex min-w-0 justify-center lg:justify-self-start">
-            <Logo variant="footer" />
+            <PentLogo variant="footer" />
           </div>
 
           <p className="site-footer-copyright type-sm-regular m-0 min-w-0 text-center text-text-contrast lg:justify-self-center lg:text-center">
@@ -73,23 +73,12 @@ export function Footer() {
             <p className="site-footer-credit type-sm-medium m-0 text-text-contrast">
               Realised by Right Tail Corp.
             </p>
-            <nav
-              className="site-footer-links flex items-center"
-              aria-label="Legal"
-            >
-              <Link
-                href="#"
-                className="site-footer-legal-link type-sm-medium text-text-contrast"
-              >
+            <nav className="site-footer-links flex items-center" aria-label="Legal">
+              <Link href="#" className="site-footer-legal-link type-sm-medium text-text-contrast">
                 Privacy Policy
               </Link>
-              <span className="site-footer-links-dot" aria-hidden>
-                ·
-              </span>
-              <Link
-                href="#"
-                className="site-footer-legal-link type-sm-medium text-text-contrast"
-              >
+              <span className="site-footer-links-dot" aria-hidden>·</span>
+              <Link href="#" className="site-footer-legal-link type-sm-medium text-text-contrast">
                 Terms of Service
               </Link>
             </nav>
